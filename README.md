@@ -1,3 +1,3 @@
-# folio_FE
+# Folio
 
 React Native Cryptocurrency Portfolio
