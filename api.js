@@ -1,5 +1,5 @@
 const baseURL = 'https://coinroutes.com'
-
+const apiToken = ''
 const priceSocketURL = 'api/streaming/real_price'
 const cbboSocketURL = 'api/streaming/cbbo'
 
@@ -38,6 +38,7 @@ const  getCurrencyPairs = ()=>{
     const data = await this.request({
         endpoint:endpoint,
         method:'GET',
+        token:apiToken
     })
     return {data}
 }
@@ -61,7 +62,8 @@ const  costCalculator = (currency_pair, exchanges, side, quantity)=>{
             exchanges: exchanges,
             side: side,
             quantity: quantity,
-        }
+        },
+        token:apiToken
     })
       return {data}
     }
